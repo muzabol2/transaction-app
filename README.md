@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+## Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application should contain list of bank transactions, based on design structure from _design.png_ file and contain following functionalities:
+![](./design.png)
+1.  Transactions fetched from API, displayed in table or list.
+2.  Pagination (infinite-scroll or traditional, 20 items per page)
+3.  Filtering by `beneficiary` field
+4.  Form for adding new transaction to the list with basic non-empty fields validation. Add input fields for:
+    -   amount (must be positive)
+    -   account number (not empty, numbers)
+    -   address
+    -   description
+    -   date and id should be generated when submiting form
+5.  Simple communicate when success/error after form submission.
+6.  Removing transaction from the list
 
-## Available Scripts
+NOTE: Points 2-5 should be done on front-end side.
 
-In the project directory, you can run:
+## API description
 
-### `npm start`
+To run API, run following commands in task directory:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    npm install
+    npm run server
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Server will be available on http://localhost:3000.
 
-### `npm test`
+Available endpoints:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> GET /transactions
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Required technologies for development are _React_ and _Typescript_.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Summary
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Send us back your app with instruction how to run app and tests. Preferred way is to get URL to codesandbox or your public repository with project. In case of problems/questions feel free to ask.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Good luck!**
