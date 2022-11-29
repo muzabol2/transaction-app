@@ -1,8 +1,10 @@
 ## transaction-app
 Here is a screenshot of my app:
-![](./solution.png)
+| Desktop | Mobile |
+|---|---|
+![](./solution.png) |  ![](./mobile.png) 
 
-Download the repository and then in directory:
+Download the repository and then in directory type in console:
 
     npm install
     npm run server
@@ -12,7 +14,6 @@ And in the second console:
     npm run start
 
 To test the app manually, please fill up the tranasction form and hit the "Add transaction" button. You can also remove any transaction with the "X" next to each transaction.
-
 
 ## Task
 Application should contain list of bank transactions, based on design structure from _design.png_ file and contain following functionalities:
