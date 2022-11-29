@@ -1,0 +1,196 @@
+html {
+   height: 100%;
+}
+
+.app {
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 1fr auto;
+   background-color: var(--bg-color);
+   text-align: center;
+}
+
+.navbar {
+   background-color: white;
+}
+
+.navbar ul {
+   display: flex;
+   align-items: center;
+   margin: 5px auto 0px;
+   padding-left: 5px;
+}
+
+.footer {
+   border-top: 1px solid grey;
+}
+
+.footer ul {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   margin: 15px;
+   gap: 3px;
+}
+
+main {
+   padding: 0px 20%;
+}
+
+.item {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.filter {
+   height: 60px;
+}
+
+.balance {
+   font-weight: bold;
+   font-size: 1.4em;
+   height: 60px;
+}
+
+.transaction-form {
+   background-color: #ddd;
+   min-width: 80%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   border: 2px solid;
+   border-radius: 10px;
+   border-color: var(--border-color);
+}
+
+.container {
+   flex: 1 0 auto;
+   display: grid;
+   gap: 3px;
+   padding: 3px;
+   margin-top: 10px;
+}
+
+.upper-part {
+   display: grid;
+   grid-template-columns: 40% 60%;
+   gap: 3px;
+   padding: 0px 3px;
+}
+
+.upperleft-part {
+   display: grid;
+   align-content: space-between;
+   padding: 3px;
+}
+
+.error {
+   margin-top: 30px;
+   color: red;
+   font-weight: bold;
+   height: 40px;
+}
+
+.transactions li {
+   color: #777;
+   margin: 10px auto;
+   border: 1px solid #f2f2f2;
+   box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.1);
+   padding: 20px;
+   position: relative;
+   overflow: hidden;
+   border-left: 4px solid #C32051;
+   text-align: center;
+}
+
+.wrapper {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 7px;
+}
+
+.wrapper .long {
+   grid-column: span 2;
+   text-align: left;
+   font-style: italic;
+   font-size: 0.8em;
+}
+
+.transactions .beneficiary {
+   color: #777;
+   font-size: 1em;
+}
+
+.transactions .amount {
+   margin-top: 10px;
+   font-weight: bold;
+   font-size: 1.4em;
+   color: green;
+   text-align: right;
+   grid-row: span 3;
+}
+
+.transactions .description {
+   font-size: 0.8em;
+   text-align: left;
+}
+
+.transactions .negative {
+   color: red;
+}
+
+.transactions button {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background: #ddd;
+   color: #777;
+   border: none;
+   padding: 12px 8px;
+   text-align: center;
+   line-height: 0;
+   font-size: 0.9em;
+   cursor: pointer;
+}
+
+.transactions .date {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #ddd;
+   color: #777;
+   border: none;
+   padding: 8px 5px;
+   line-height: 0;
+   font-size: 0.7em;
+}
+
+@media only screen and (max-width: 768px) {
+   .upper-part {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-flow: dense;
+      padding: 0px;
+   }
+
+   .upperleft-part {
+      order: 2;
+      padding: 0px;
+   }
+
+   main {
+      padding: 0px;
+   }
+
+   .navbar ul {
+      display: grid;
+   }
+   .footer ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 15px;
+   }
+   .transaction-form {
+      grid-template-columns: 1fr;
+   }
+}
