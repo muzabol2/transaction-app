@@ -1,7 +1,7 @@
 import { useFetch } from '../../hooks/useFetch'
 import { useState } from 'react';
-import Balance from "./Balance/Balance";
-import Filter from "./Filter/Filter";
+import Balance from "./balance/Balance";
+import Filter from "./filter/Filter";
 import TransactionForm from "./transactionForm/TransactionForm";
 import TransactionsTable from "./transactionsTable/TransactionsTable";
 import 'react-toastify/dist/ReactToastify.css';
