@@ -2,7 +2,7 @@
 Here is a screenshot of my app:
 | Desktop | Mobile |
 |---|---|
-![](./solution.png) |  ![](./mobile.png) 
+![desktop][desktopScreenshot] | ![mobile][mobileScreenshot]
 
 Download the repository and then in directory type in console:
 
@@ -17,7 +17,8 @@ To test the app manually, please fill up the tranasction form and hit the "Add t
 
 ## Task
 Application should contain list of bank transactions, based on design structure from _design.png_ file and contain following functionalities:
-![](./design.png)
+![design][designPhoto]
+
 1.  Transactions fetched from API, displayed in table or list.
 2.  Pagination (infinite-scroll or traditional, 20 items per page)
 3.  Filtering by `beneficiary` field
@@ -54,3 +55,7 @@ Required technologies for development are _React_ and _Typescript_.
 Send us back your app with instruction how to run app and tests. Preferred way is to get URL to codesandbox or your public repository with project. In case of problems/questions feel free to ask.
 
 **Good luck!**
+
+[desktopScreenshot]: https://user-images.githubusercontent.com/109333068/204725049-fda45de7-3abd-4550-bf1e-3ffffadcadbb.png
+[mobileScreenshot]: https://user-images.githubusercontent.com/109333068/204725183-76cca530-8fab-4ace-94c9-4a36437840da.png
+[designPhoto]: https://user-images.githubusercontent.com/109333068/204725284-53df47fe-5792-4124-b968-810ef8b90621.png
