@@ -1,16 +1,18 @@
-import { useFetch } from '../hooks/useFetch'
+import { useFetch } from '../../hooks/useFetch'
 import { useState } from 'react';
-import Balance from "../areas/Balance";
-import Filter from "../areas/Filter";
-import TransactionForm from "../areas/TransactionForm";
-import TransactionsTable from "../areas/TransactionsTable";
+import Balance from "./Balance/Balance";
+import Filter from "./Filter/Filter";
+import TransactionForm from "./transactionForm/TransactionForm";
+import TransactionsTable from "./transactionsTable/TransactionsTable";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import styles from './Home.module.css';
 
 export default function Home() {
    const { data, isPending, error, success, getData } = useFetch();
    const [currentFilter, setCurrentFilter] = useState<string | null>(null);
 
+   
    const changeFilter = (newFilter: any) => {
       setCurrentFilter(newFilter);
    }
@@ -30,22 +32,17 @@ export default function Home() {
       null;
 
    return (
-      <main>
+      <main className={styles.main}>
          <ToastContainer />
-         <div className="container">
-            <div className="upper-part">
-               <div className="upperleft-part">
+         <div className={styles.container}>
+            <div className={styles.upperpart}>
+               <div className={styles.upperleftpart}>
                   <Balance sum={sum} />
-                  <Filter
-                     data={data}
-                     changeFilter={changeFilter}
-                  />
+                  <Filter data={data} changeFilter={changeFilter} />
                </div>
                <TransactionForm reloadData={reloadData} />
             </div>
-            <TransactionsTable
-               transactions={beneficiary}
-               reloadData={reloadData} />
+            <TransactionsTable transactions={beneficiary} reloadData={reloadData} />
          </div>
       </main>
    )

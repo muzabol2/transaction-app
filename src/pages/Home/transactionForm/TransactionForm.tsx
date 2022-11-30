@@ -1,11 +1,11 @@
 import { useFormik, FormikProvider, Form, Field } from 'formik';
-import { transactionSchema } from './validateTransaction';
-import { validateYupSchemaMultiErrors } from './validateFormikMultiErrors';
-import dayjs from 'dayjs';
+import { transactionSchema } from './helpers/validateTransaction';
+import { validateYupSchemaMultiErrors } from './helpers/validateFormikMultiErrors';
+import { currentLongDateFormat } from '../../../utils/dateFormat';
 import { Grid } from '@mui/material';
-import { ColorButton } from '../components/ColorButton';
-import { useFetch } from '../hooks/useFetch';
-import { TextFormField } from '../components/TextFormField';
+import { useFetch } from '../../../hooks/useFetch';
+import { TextFormField } from '../../../components/TextFormField';
+import styles from './TransactionForm.module.css';
 
 export default function TransactionForm({ reloadData }: any) {
    const { postData, error, success } = useFetch();
@@ -28,7 +28,7 @@ export default function TransactionForm({ reloadData }: any) {
             account,
             address,
             description,
-            date: dayjs().format('YYYY-MM-DDTHH:mm:ss').toString()
+            date: currentLongDateFormat()
          })
          resetForm();
          reloadData();
@@ -40,7 +40,7 @@ export default function TransactionForm({ reloadData }: any) {
    return (
       <FormikProvider value={transactionFormik}>
          <Form onSubmit={handleSubmit}>
-            <div className="transaction-form">
+            <div className={styles.transactionform}>
                {transactionElements.map(element =>
                   <Grid mt={1} key={element}>
                      <Field
@@ -51,9 +51,9 @@ export default function TransactionForm({ reloadData }: any) {
                   </Grid>
                )}
                <Grid mt={1} mb={1}>
-                  <ColorButton type="submit">
-                     Add Transaction
-                  </ColorButton>
+                  <button type="submit">
+                     ADD TRANSACTION
+                  </button>
                </Grid>
             </div>
          </Form>
