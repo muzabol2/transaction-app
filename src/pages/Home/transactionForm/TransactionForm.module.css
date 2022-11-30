@@ -1,0 +1,31 @@
+.transactionform {
+   background-color: var(--light-grey);
+   min-width: 80%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   border: 2px solid;
+   border-radius: 10px;
+   border-color: var(--blue);
+}
+
+.transactionform button {
+   width: 270px;
+   height: 40px;
+   background: none;
+   border: 2px solid var(--blue);
+   border-radius: 7px;
+   color: var(--white);
+   background-color: var(--blue);
+   font-weight: bold;
+}
+
+.transactionform button:hover {
+   color: var(--blue);
+   background-color: var(--white);
+}
+
+@media only screen and (max-width: 768px) {
+   .transactionform {
+      grid-template-columns: 1fr;
+   }
+}

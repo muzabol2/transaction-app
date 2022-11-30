@@ -1,0 +1,12 @@
+.filter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 60px;
+}
+
+.autocomplete {
+   width: 300px;
+   background-color: var(--white);
+   border-radius: 10px;
+}

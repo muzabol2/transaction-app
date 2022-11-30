@@ -1,0 +1,43 @@
+.main {
+   background-color: var(--main-bg-color);
+   padding: 0px 20%;
+   text-align: center;
+}
+
+.container {
+   flex: 1 0 auto;
+   display: grid;
+   gap: 3px;
+   padding-top: 10px;
+}
+
+.upperpart {
+   display: grid;
+   grid-template-columns: 40% 60%;
+   gap: 3px;
+   padding: 0px 3px;
+}
+
+.upperleftpart {
+   display: grid;
+   align-content: space-between;
+   padding: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+   .main {
+      padding: 0px;
+   }
+
+   .upperpart {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-flow: dense;
+      padding: 0px;
+   }
+
+   .upperleftpart {
+      order: 2;
+      padding: 0px;
+   }
+}
